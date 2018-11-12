@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro:900');
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+
+body {
+    min-width: 300px;
+    font-size: 100%;
+    background: #F7F7F7;
+    -webkit-font-smoothing: antialiased;
+}
+
+div {
+  display: block;
+}
+
+.header-wrap {
+    width: 100%;
+    background: hsla(240,17%,99%,0.97);
+    border-bottom: 0.0625em solid #fff;
+    box-shadow: 0 0.25em 0 hsla(0,0%,0%,0.05);
+    z-index: 10;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 120%;
+}
+
+a {
+  padding: 2% 4% 2% 4%;
+  text-decoration: none;
+  color: #99A0B0;
+  background: transparent;
+  text-align: center;
+}
+
+a:hover {
+  color: #F27F7A;
+  background: rgba(242, 127, 122, 0.06);
+  text-decoration: none;
+  line-height: inherit;
+  border-bottom: 0.125em solid #F7F7F7;
+  -webkit-transition-duration: .4s;
+  -moz-transition-duration: .4s;
+  -o-transition-duration: .4s;
+  transition-duration: .4s;
+  height: 100%;
+}
+
+.headline {
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:70vh;
+}
+
+.largeText {
+  font-size: 400%;
+  letter-spacing: .2em;
+  padding: 0;
+  margin: 0;
+  text-shadow: 2px 2px #ff0000;
+
+}
+
+.mediumText {
+  font-size: 300%;
+  letter-spacing: .3em;
+}
+
+.smallText {
+  font-size: 200%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.hero:after {
+    content:'';
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-left: -50px;
+    width: 0;
+    height: 0;
+    border-top: solid 50px #e15915;
+    border-left: solid 50px transparent;
+    border-right: solid 50px transparent;
+}
